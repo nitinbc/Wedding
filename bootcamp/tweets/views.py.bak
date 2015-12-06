@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from bootcamp.decorators import ajax_required
 from django.contrib.auth.models import User
 import json
-from bootcamp.messages.models import Message
+from bootcamp.tweets.models import Message
 
 @login_required
 def inbox(request):

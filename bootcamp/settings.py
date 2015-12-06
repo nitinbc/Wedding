@@ -33,14 +33,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.humanize',
 
-    'south',
-
     'bootcamp.activities',
     'bootcamp.articles',
-    'bootcamp.auth',
+    'bootcamp.uauth',
     'bootcamp.core',
     'bootcamp.feeds',
-    'bootcamp.messages',
+    'bootcamp.tweets',
     'bootcamp.questions',
     'bootcamp.search',
 )
@@ -103,4 +101,4 @@ LOGIN_REDIRECT_URL = '/feeds/'
 ALLOWED_SIGNUP_DOMAINS = ['*']
 
 FILE_UPLOAD_TEMP_DIR = '/tmp/'
-FILE_UPLOAD_PERMISSIONS = 0644
+FILE_UPLOAD_PERMISSIONS = '0644'

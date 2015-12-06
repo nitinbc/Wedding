@@ -1,3 +1,10 @@
+# For Python3 / Django 1.9.0
+
+psycopg Installation:
+
+http://stackoverflow.com/questions/11618898/pg-config-executable-not-found
+
+
 # Bootcamp
 
 [![Build Status](https://travis-ci.org/vitorfs/bootcamp.svg?branch=master)](https://travis-ci.org/vitorfs/bootcamp)
