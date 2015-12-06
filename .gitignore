@@ -63,6 +63,7 @@ staticfiles
 
 # Sublime
 *.sublime
+*.sublime-project
 *.sublime-workspace
 
 # Backup File
