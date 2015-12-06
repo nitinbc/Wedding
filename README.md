@@ -1,9 +1,12 @@
-# For Python3 / Django 1.9.0
+# For Python3 / Django 1.8.7
 
 psycopg Installation:
 
 http://stackoverflow.com/questions/11618898/pg-config-executable-not-found
 
+# ToDo
+
+Strip values before saving them.
 
 # Bootcamp
 
