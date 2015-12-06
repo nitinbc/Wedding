@@ -4,7 +4,7 @@ from django.db import models
 from django.conf import settings
 import os.path
 from bootcamp.activities.models import Notification
-import urllib.request, urllib.parse, urllib.error, hashlib
+import urllib, hashlib
 
 class Profile(models.Model):
     user = models.OneToOneField(User)
@@ -28,12 +28,12 @@ class Profile(models.Model):
             if os.path.isfile(filename):
                 return picture_url
             else:
-                gravatar_url = 'http://www.gravatar.com/avatar/{0}?{1}'.format(
+                gravatar_url = u'http://www.gravatar.com/avatar/{0}?{1}'.format(
                     hashlib.md5(self.user.email.lower()).hexdigest(),
-                    urllib.parse.urlencode({'d':no_picture, 's':'256'})
+                    urllib.urlencode({'d':no_picture, 's':'256'})
                     )
                 return gravatar_url
-        except Exception as e:
+        except Exception, e:
             return no_picture
 
     def get_screen_name(self):
