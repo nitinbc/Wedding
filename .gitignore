@@ -60,3 +60,10 @@ media/
 
 venv_bootcamp/
 staticfiles
+
+# Sublime
+*.sublime
+*.sublime-workspace
+
+# Backup File
+*.bak
