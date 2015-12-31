@@ -1,6 +1,7 @@
 # For Python3 / Django 1.8.7
 
 psycopg Installation:
+https://github.com/nwcell/psycopg2-windows
 
 http://stackoverflow.com/questions/11618898/pg-config-executable-not-found
 
