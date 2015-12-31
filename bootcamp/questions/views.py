@@ -49,10 +49,10 @@ def ask(request):
         if form.is_valid():
            question = Question()
            question.user = request.user
-           question.title = form.cleaned_data.get('title')
-           question.description = form.cleaned_data.get('description')
+           question.title = form.cleaned_data.get('Titel')
+           question.description = form.cleaned_data.get('Beschreibung')
            question.save()
-           tags = form.cleaned_data.get('tags')
+           tags = form.cleaned_data.get('Schlagworte')
            question.create_tags(tags)
            return redirect('/questions/')
         else:
