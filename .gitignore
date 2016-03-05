@@ -75,3 +75,4 @@ bootcamp/feeds/migrations/
 bootcamp/questions/migrations/
 bootcamp/tweets/migrations/
 bootcamp/userauth/migrations/
+bootcamp/follow/migrations/
