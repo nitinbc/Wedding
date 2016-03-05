@@ -103,10 +103,37 @@ ALLOWED_SIGNUP_DOMAINS = ['*']
 FILE_UPLOAD_TEMP_DIR = '/tmp/'
 FILE_UPLOAD_PERMISSIONS = '0644'
 
-import logging, copy
-from django.utils.log import DEFAULT_LOGGING
+import logging
 
-LOGGING = copy.deepcopy(DEFAULT_LOGGING)
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file1': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/home/ubuntu/public_html/logs/django.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file1'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+    }
+}
+
 LOGGING['filters']['suppress_deprecated'] = {
     '()': 'bootcamp.settings.SuppressDeprecated'  
 }
