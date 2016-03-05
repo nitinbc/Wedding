@@ -103,6 +103,8 @@ ALLOWED_SIGNUP_DOMAINS = ['*']
 
 FILE_UPLOAD_TEMP_DIR = '/tmp/'
 
+LOG_FILE = PROJECT_DIR.parent.parent.child('logs').child('django.log')
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -119,7 +121,7 @@ LOGGING = {
         'file1': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/ubuntu/public_html/logs/django.log',
+            'filename': LOG_FILE,
             'formatter': 'verbose'
         },
     },
