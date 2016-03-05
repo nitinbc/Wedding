@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
+import bootcamp.follow.urls
 
 
 urlpatterns = patterns('',
@@ -24,4 +25,5 @@ urlpatterns = patterns('',
     url(r'^search/$', 'bootcamp.search.views.search', name='search'),
     url(r'^(?P<username>[^/]+)/$', 'bootcamp.core.views.profile', name='profile'),
     url(r'^i18n/', include('django.conf.urls.i18n', namespace='i18n')),
+    url(r'^graph/', include('bootcamp.follow.urls', namespace='follow')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
